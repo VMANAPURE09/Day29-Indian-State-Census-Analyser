@@ -10,6 +10,8 @@ namespace IndianStatesCensusAnalyser
         static string indianStateCensusHeaders = "State,Population,AreaInSqKm,DensityPerSqKm";
 
         static string indianStateCensusFilePath = @"E:\BridgeLabz2\PraticeProblem\Day29-Indian-State-Census-Analyser\CensusAnalyserTest\CSVFiles\IndiaStateCensusData.csv";
+        static string wrongIndianStateCensusFilePath = @"E:\BridgeLabz2\PraticeProblem\Day29-Indian-State-Census-Analyser\CensusAnalyserTest\CSVFiles\IndiaData.csv";
+        static string wrongIndianStateCensusFileType = @"E:\BridgeLabz2\PraticeProblem\Day29-Indian-State-Census-Analyser\CensusAnalyserTest\CSVFiles\IndianStateCensus.txt";
 
 
         static void Main(string[] args)
@@ -20,6 +22,12 @@ namespace IndianStatesCensusAnalyser
 
             // Loading the Census Data File
             indianCensusAdapter.LoadCensusData(indianStateCensusFilePath, indianStateCensusHeaders);
+
+            //1.2
+            indianCensusAdapter.LoadCensusData(wrongIndianStateCensusFilePath, indianStateCensusHeaders);
+
+            //1.3
+            indianCensusAdapter.LoadCensusData(wrongIndianStateCensusFileType, indianStateCensusHeaders);
         }
     }
 }
