@@ -13,6 +13,7 @@ namespace IndianStatesCensusAnalyser
         static string wrongIndianStateCensusFilePath = @"E:\BridgeLabz2\PraticeProblem\Day29-Indian-State-Census-Analyser\CensusAnalyserTest\CSVFiles\IndiaData.csv";
         static string wrongIndianStateCensusFileType = @"E:\BridgeLabz2\PraticeProblem\Day29-Indian-State-Census-Analyser\CensusAnalyserTest\CSVFiles\IndianStateCensus.txt";
         static string delimiterIndianCensusFilePath = @"E:\BridgeLabz2\PraticeProblem\Day29-Indian-State-Census-Analyser\CensusAnalyserTest\CSVFiles\IndianStateCesusDelimeter.csv";
+        static string wrongHeaderIndianCensusFilePath = @"E:\BridgeLabz2\PraticeProblem\Day29-Indian-State-Census-Analyser\CensusAnalyserTest\CSVFiles\WrongIndiaStateCensusData.csv";
 
         static void Main(string[] args)
         {
@@ -31,6 +32,9 @@ namespace IndianStatesCensusAnalyser
 
             //1.4
             indianCensusAdapter.LoadCensusData(delimiterIndianCensusFilePath, indianStateCensusHeaders);
+
+            //1.5
+            indianCensusAdapter.LoadCensusData(wrongHeaderIndianCensusFilePath, indianStateCensusHeaders);
         }
     }
 }
